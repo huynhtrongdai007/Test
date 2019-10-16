@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--room-->
+        <record id="view_hotel_tree" model="ir.ui.view">
+            <field name="name">view.hotel.tree</field>
+            <field name="model">hotel.fit</field>
+            <field name="arch" type="xml">
+                <tree string="Hotel">
+                    <field name="name"/>
+                    <field name="diachi"/>
+                    <field name="email"/>
+                    <field name="sdt"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_hotel_form" model="ir.ui.view">
+            <field name="name">view.hotel.form</field>
+            <field name="model">hotel.fit</field>
+            <field name="arch" type="xml">
+                <form string="Hotel">
+                    <header>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="diachi"/>
+                                <field name="email"/>
+                                <field name="sdt"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="action_hotel" model="ir.actions.act_window">
+            <field name="name">Hotel</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hotel.fit</field>
+            <field name="view_id" ref="view_hotel_tree"/>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_action_hotel" name="Hotel"
+                  action="action_hotel"
+                  parent="fit_root"
+                  sequence="5"/>
+
+    </data>
+</odoo>
+

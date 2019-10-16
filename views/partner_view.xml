@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_partner_fit_form_inherit" model="ir.ui.view">
+            <field name="name">view.partner.fit_form.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <page name="sales_purchases" position="after">
+                    <page string="History travel">
+                        <field name="nkdh_ids">
+                            <tree string="History travel">
+                                <field name="partner_id" invisible="1"/>
+                                <field name="fit_id"/>
+                                <field name="visa"/>
+                                <field name="passport"/>
+
+                                <field name="date1"/>
+                                <field name="place1"/>
+                                <field name="flight1"/>
+                                <field name="time1" widget="float_time"/>
+                                <field name="time2" widget="float_time"/>
+
+                                <field name="date2"/>
+                                <field name="place2"/>
+                                <field name="flight2"/>
+                                <field name="time3" widget="float_time"/>
+                                <field name="time4" widget="float_time"/>
+
+                                <field name="ks_check_in"/>
+                                <field name="ks_check_out"/>
+
+                            </tree>
+
+                            <form string="History travel">
+                                <sheet>
+                                    <group>
+                                        <group>
+                                            <field name="partner_id" invisible="1"/>
+                                            <field name="fit_id"/>
+                                            <field name="visa"/>
+                                            <field name="passport"/>
+                                        </group>
+                                        <group>
+                                            <field name="ks_check_in"/>
+                                            <field name="ks_check_out"/>
+                                        </group>
+                                        <group string="Đến">
+                                            <field name="date1"/>
+                                            <field name="place1"/>
+                                            <field name="flight1"/>
+                                            <field name="time1" widget="float_time"/>
+                                            <field name="time2" widget="float_time"/>
+                                        </group>
+                                        <group string="Đi">
+                                            <field name="date2"/>
+                                            <field name="place2"/>
+                                            <field name="flight2"/>
+                                            <field name="time3" widget="float_time"/>
+                                            <field name="time4" widget="float_time"/>
+                                        </group>
+                                    </group>
+                                </sheet>
+                            </form>
+
+                        </field>
+                    </page>
+                </page>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>
+

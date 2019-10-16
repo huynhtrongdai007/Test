@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_agenda_agenda,access_agenda_agenda,model_agenda_agenda,base.group_user,1,1,1,1
+access_yuemei_fit,access_yuemei_fit,model_yuemei_fit,base.group_user,1,1,1,1
+access_nkdh_line,access_nkdh_line,model_nkdh_line,base.group_user,1,1,1,1
+
+access_res_air_plan,access_res_air_plan,model_res_air_plan,base.group_user,1,1,1,1
+access_hotel_fit,access_hotel_fit,model_hotel_fit,base.group_user,1,1,1,1

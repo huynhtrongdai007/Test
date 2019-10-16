@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--room-->
+        <record id="view_res_air_plan_tree" model="ir.ui.view">
+            <field name="name">view.res.air.plan.tree</field>
+            <field name="model">res.air.plan</field>
+            <field name="arch" type="xml">
+                <tree string="Air Plan">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="date_from"/>
+                    <field name="date_to"/>
+                    <field name="place_from"/>
+                    <field name="place_to"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_res_air_plan_form" model="ir.ui.view">
+            <field name="name">view.res.air.plan.form</field>
+            <field name="model">res.air.plan</field>
+            <field name="arch" type="xml">
+                <form string="Air Plan">
+                    <header>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="code"/>
+                            </group>
+                            <group>
+                                <field name="date_from"/>
+                                <field name="date_to"/>
+                                <field name="place_from"/>
+                                <field name="place_to"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="action_res_air_plan" model="ir.actions.act_window">
+            <field name="name">Air Plan</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.air.plan</field>
+            <field name="view_id" ref="view_res_air_plan_tree"/>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_action_res_air_plan" name="Air Plan"
+                  action="action_res_air_plan"
+                  parent="fit_root"
+                  sequence="5"/>
+
+    </data>
+</odoo>
+
